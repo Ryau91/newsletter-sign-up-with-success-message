@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <script src="script.js" defer></script>
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+<main>
+  <!-- We can use picture for a more responsive image element -->
+  <header>
+    <picture>
+      <source media="(min-width:576px)" srcset="assets/images/illustration-sign-up-desktop.svg">
+      <img src="assets/images/illustration-sign-up-mobile.svg" alt="sign-up-image">
+    </picture>
+  </header>
+    <!-- Sign-up form start -->
+  <div class="main-content-box">
+    <h1>Stay updated!</h1>
+
+    <p>Join 60,000+ product managers receiving monthly updates on:</p>
+    <ul class="bullet-point-list">
+      <li><div class="li-center">Product discovery and building what matters</div></li>
+      <li><div class="li-center">Measuring to ensure updates are a success</div></li>
+      <li><div class="li-center">And much more!</div></li>
+    </ul>
+    
+    <form class="email-box" id="email-box" novalidate>
+      <label>Email address <span id="email-error-message">Valid Email required</span></label>
+      <input type="email" name="email" id="email" placeholder="email@company.com"
+      required></input>
+      <button data-modal-target="#modal" type="reset" class="subscribe" id="subscribe"><p>Subscribe to monthly newsletter</p>
+      </button>
+    </form>
+  </main>
+  
+    <!-- Sign-up form end -->
+  
+    <!-- Success message start -->
+    
+  <div class="modal" id="modal">
+      <img class="dismiss-icon" src="assets/images/icon-success.svg" alt="success icon">
+      <div class="modal-header">
+        <div class="title">
+          <h1>Thanks for subscribing!</h1>
+        </div>
+      </div>
+      <div class="modal-body">
+        <p> A confirmation email has been sent to <span id="submitted-email-address">ash@loremcompany.com</span>. Please open it and click the button inside to confirm your subscription.
+        </p>
+      </div>
+      <div class="dismiss-box">
+        <button data-dismiss-button class="dismiss" id="dismiss">
+          <p>Dismiss message</p>
+        </button>
+      </div>
+  </div>
+  <div id="overlay"></div>
+    <!-- Success message end -->
+</body>
+</html>
